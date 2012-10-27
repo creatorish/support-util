@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Support Utility JS</title>
+<meta name="description" content="機能が使えるかどうかや端末情報を取得するライブラリ" />
+<meta name="keyword" content="ブラウザ,サポート,javascript,ベンダープレフィックス,flash,バージョン" />
+<style>
+	table {
+		border-collapse: collapse;
+	}
+	th {
+		text-align: left;
+	}
+	th,td {
+		border: 1px solid #ccc;
+		padding: 5px 12px;
+	}
+	th.title {
+		padding: 15px 12px 8px 0px;
+		border: 0;
+	}
+	h1 {
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 12px;
+		font-weight: normal;
+	}
+	#footer {
+		font-size: 11px;
+		margin-top: 15px;
+	}
+</style>
+</head>
+<body>
+	<h1>Support Utility JS</h1>
+	<h2>機能が使えるかどうかや端末情報を取得するライブラリ</h2>
+	<table id="support"></table>
+	<div id="footer">Copyright(c) <a href="http://creatorish.com">creatorish.com</a></div>
+	<script src="jquery.js"></script>
+	<script src="support-util.js"></script>
+	<script>
+		function addline(name,value) {
+			$("#support").append("<tr><th>"+name+"</th><td>"+value+"</td></tr>");
+		}
+		function addTitme(name) {
+			$("#support").append("<tr><th class='title' colspan='2'>"+name+"</th>");
+		}
+		
+		addTitme("$s.support");
+		addline("$s.support.cookie",$s.support.cookie);
+		addline("$s.support.transform3d",$s.support.transform3d);
+		addline("$s.support.touch",$s.support.touch);
+		addline("$s.support.geolocation",$s.support.geolocation);
+		addline("$s.support.devicemotion",$s.support.devicemotion);
+		addline("$s.support.deviceorientation",$s.support.deviceorientation);
+		addline("$s.support.getComputedStyle",$s.support.getComputedStyle);
+		
+		addTitme("$s.vendor");
+		addline("$s.vendor.name",$s.vendor.name);
+		addline("$s.vendor.browser",$s.vendor.browser);
+		addline("$s.vendor.version",$s.vendor.version);
+		addline("$s.vendor.prefix",$s.vendor.prefix);
+		addline("$s.vendor.transitionend",$s.vendor.transitionend);
+		addline("$s.vendor.animationend",$s.vendor.animationend);
+		
+		addTitme("$s.device");
+		addline("$s.device.version",$s.device.version);
+		addline("$s.device.windows",$s.device.windows);
+		addline("$s.device.mac",$s.device.mac);
+		addline("$s.device.iPhone",$s.device.iPhone);
+		addline("$s.device.iPad",$s.device.iPad);
+		addline("$s.device.android",$s.device.android);
+		addline("$s.device.tablet",$s.device.tablet);
+		addline("$s.device.androidTablet",$s.device.androidTablet);
+		addline("$s.device.androidMobile",$s.device.androidMobile);
+		addline("$s.device.mobile",$s.device.mobile);
+		addline("$s.device.windowsPhone",$s.device.windowsPhone);
+		addline("$s.device.retina",$s.device.retina);
+		
+		addTitme("$s.flash");
+		addline("$s.flash.version",$s.flash.version);
+		addline("$s.flash.support",$s.flash.support);
+	</script>
+</body>
+</html>
