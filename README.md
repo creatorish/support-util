@@ -4,7 +4,7 @@ Support Utility JS
 
 デモ
 ------
-<a href="http://dev.creatorish.com/demo/support-util/" target="_blank">http://dev.creatorish.com/demo/support-util/</a>
+http://dev.creatorish.com/demo/support-util/
 
 取得できる情報
 ------
