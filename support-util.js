@@ -172,8 +172,8 @@ var $s = {
 		};
 		
 		var ua = navigator.userAgent;
-		device.mobile = (ua.search(/Mobile/) !== -1);
 		if (ua.search(/Android/) !== -1) {
+			device.mobile = (ua.search(/Mobile/) !== -1);
 			device.android = true;
 			if (device.mobile) {
 				device.androidMobile = true;
